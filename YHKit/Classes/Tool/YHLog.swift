@@ -6,8 +6,6 @@
 //
 
 import SnapKit
-import Kingfisher
-import FDFullscreenPopGesture
 
 
 
