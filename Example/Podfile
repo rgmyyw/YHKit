@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'YHKit_Example' do
+  pod 'YHKit', :path => '../'
+
+  target 'YHKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
