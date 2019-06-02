@@ -140,12 +140,12 @@ extension YHNavBarViewController {
     }
     private func yh_addBackBtn() {
         
-        yh_backBtn.tag = 100 >> 2
         yh_backBtn.setImage(yh_navigationBackButtonImage, for: UIControlState.normal)
         yh_backBtn.setImage(yh_navigationBackButtonImage, for: UIControlState.highlighted)
         yh_backBtn.frame = CGRect(x: 10, y: UIApplication.shared.statusBarFrame.size.height, width: 34.0, height: 44.0)
-        yh_navigationBar.addSubview(yh_backBtn)
         yh_backBtn.addTarget(self, action: #selector(yh_backBtnClick(btn:)), for: UIControlEvents.touchUpInside)
+        
+        yh_navigationBar.yh_leftBarButtonItems.append(yh_backBtn)
     }
     @objc open func yh_backBtnClick(btn: UIButton) {
         

@@ -20,6 +20,8 @@
 		1BBDCB6547E558638CA3F59494A73DA8 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D24E4BF9D756F9938D25B7198EA8315 /* ConstraintDescription.swift */; };
 		1F65EF45375A7DE34AEDF6C48B9005AD /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6FF12AF149760A721A3CDB5BC19E87 /* ConstraintLayoutSupport.swift */; };
 		2256E756A1FA8DD6859AA5854F859CD2 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EE9DE1E905992BB224A3CA5000B4A8 /* ConstraintMakerRelatable.swift */; };
+		22570DDB22A40E61006A5CC1 /* CGRect-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22570DDA22A40E61006A5CC1 /* CGRect-Extension.swift */; };
+		22570DDD22A40EED006A5CC1 /* Dictionary-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22570DDC22A40EED006A5CC1 /* Dictionary-Extension.swift */; };
 		25D5ACB24F62CAD0B1B344427CBB9352 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064F35A805E87308B86828763BC29B11 /* ConstraintViewDSL.swift */; };
 		269C58AD051427F1A7924380401E26EB /* YHNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F288B5F093D73B29F12FCEE887AC3B21 /* YHNavBarViewController.swift */; };
 		27B482E9C5F3EB34714B6B8D6191E7E0 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = DF9215EAFBB6E65C955E550507B4402C /* MJRefreshAutoFooter.m */; };
@@ -205,6 +207,8 @@
 		20EFB4CF0AD5676855CCA7D27D26BFA6 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
 		215CC8B454C82C26EB20009488F11460 /* Pods-YHKit_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YHKit_Example-Info.plist"; sourceTree = "<group>"; };
 		21C000EC4CD7942CA9C8B1242C580852 /* UIView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MJExtension.h"; path = "MJRefresh/UIView+MJExtension.h"; sourceTree = "<group>"; };
+		22570DDA22A40E61006A5CC1 /* CGRect-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect-Extension.swift"; sourceTree = "<group>"; };
+		22570DDC22A40EED006A5CC1 /* Dictionary-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary-Extension.swift"; sourceTree = "<group>"; };
 		237B7DFA9DBB6D4CC2D221C599FD7B6C /* YHCollectionViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YHCollectionViewController.swift; sourceTree = "<group>"; };
 		24C02973F6F67676204A3C8A1EA4BBE8 /* YHKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YHKit-dummy.m"; sourceTree = "<group>"; };
 		26E9573FB3E62DE0165231B3251F8426 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -216,7 +220,7 @@
 		2F98FFBFF88EA6D4B3F36C30A48473F9 /* SnapKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.xcconfig; sourceTree = "<group>"; };
 		3015E03E857E2DE49313F9335A5D7519 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
 		3104D76ED1BD4A01C6CD6B7DE2B57FB7 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		328821D8D86097E1591E91EF91EF8F02 /* YHKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = YHKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		328821D8D86097E1591E91EF91EF8F02 /* YHKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = YHKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		341DFFE57330B3E3E526649DFEC5822E /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
 		35A029B8ED0084454EF9C438C2B03468 /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshNormalHeader.h; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.h; sourceTree = "<group>"; };
 		38E0008FE1EEF240502F3C4B030E9FDD /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
@@ -228,7 +232,7 @@
 		3FFEFAA0C8E47B1148C86E41FEBE2BA1 /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		42168ECAE0540A98F935B85800FBC53F /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoStateFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
 		4342A4AB324CCEF94588A9D2B071407D /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJRefresh.m"; path = "MJRefresh/UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
-		43D67922804FA5677FBD1B183B4D6F4C /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43D67922804FA5677FBD1B183B4D6F4C /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		444B38170095F48BCF4A35D5B9E0DA95 /* Pods-YHKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YHKit_Tests.modulemap"; sourceTree = "<group>"; };
 		45338CF7E0F219335DDC6000C836EA2D /* Dictionary-Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary-Extension.swift"; sourceTree = "<group>"; };
 		45E16289E21CF5BB467E0DEC514A2AFB /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
@@ -236,7 +240,7 @@
 		47AFFE133C351CD0D0F89763628D25DE /* YHSection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YHSection.swift; sourceTree = "<group>"; };
 		47C1524B9CD87BD7BD5D6567CB9EEF0E /* UITextView-Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UITextView-Extension.swift"; sourceTree = "<group>"; };
 		492C34EFF9DF42904C5D2237E7B1E34B /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
-		497C2399C0FC0C6CC1C61ACA170D0F13 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MJRefresh.framework; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		497C2399C0FC0C6CC1C61ACA170D0F13 /* MJRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MJRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1DD120D4555250B01A6CDC871EF1A5 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
 		4B265E134FF70F169E80DEB6311334C6 /* Pods-YHKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-YHKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4D6FF12AF149760A721A3CDB5BC19E87 /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
@@ -245,12 +249,12 @@
 		516834E97A37A2934310E6600490F846 /* MJRefreshConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConst.h; path = MJRefresh/MJRefreshConst.h; sourceTree = "<group>"; };
 		5296931986F0FAE6164E652F0D19C1A0 /* Pods-YHKit_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-YHKit_Tests-umbrella.h"; sourceTree = "<group>"; };
 		5911AC92D9DB916D918DD04DF246043E /* Foundation-Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Foundation-Extension.swift"; sourceTree = "<group>"; };
-		5A63B12054491FC018C182F6CA5E928F /* Pods_YHKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YHKit_Tests.framework; path = "Pods-YHKit_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A63B12054491FC018C182F6CA5E928F /* Pods_YHKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C300A796943FFA9B0851269ABBC1DFA /* Pods-YHKit_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-YHKit_Tests-Info.plist"; sourceTree = "<group>"; };
 		5C499288BD24397C6ABA23357F5EB248 /* Pods-YHKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6422BC1E151D4E1631EA0F3227B581DF /* Pods-YHKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-YHKit_Example-dummy.m"; sourceTree = "<group>"; };
 		66F46FDEBEB33FBB61EDF595FAC0B694 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
-		6727E5FAD5E8FFDE4AF1814CAD494F0D /* YHKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YHKit.framework; path = YHKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6727E5FAD5E8FFDE4AF1814CAD494F0D /* YHKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YHKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6853941D753A8E93A8D9BA9DA540AA58 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
 		6996381A3D516AEA47D03AA0CD09EA19 /* YHKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YHKit.xcconfig; sourceTree = "<group>"; };
 		6A746A88C3A273AB37C9E8921002A8C8 /* String-Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
@@ -279,7 +283,7 @@
 		9A572835F23D65C8EA46D8ECF784FE26 /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackStateFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
 		9C58FE3EB42865ED74E134B321D75423 /* YHKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YHKit-umbrella.h"; sourceTree = "<group>"; };
 		9CB150004C7D0E241235E61F37440594 /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshGifHeader.h; path = MJRefresh/Custom/Header/MJRefreshGifHeader.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DEE9B87DD68DCD0BF76BD8A61B9E0AF /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
 		9EAE7282AF1A0F61CDEFE7C31438B76B /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
 		A04C35D60313384B9DF3DC94472EE82B /* YHLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YHLog.swift; sourceTree = "<group>"; };
@@ -314,7 +318,7 @@
 		C45519F9BED7674A9A94078D437243D2 /* YHRefreshTableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YHRefreshTableViewController.swift; sourceTree = "<group>"; };
 		C4AD6DD58336CB8BE2C1696486A42DF4 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		C5EE9DE1E905992BB224A3CA5000B4A8 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		C6C1303BD2D668C7D58457EC8B11FDD7 /* Pods_YHKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_YHKit_Example.framework; path = "Pods-YHKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6C1303BD2D668C7D58457EC8B11FDD7 /* Pods_YHKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YHKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E0D55370BC4359D690969311A0E6D9 /* Pods-YHKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-YHKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C8818738C01CB8C6646CED6D06D9860C /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		CADEF5CFDB909FAF8A1E750A92226C18 /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackStateFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
@@ -329,10 +333,10 @@
 		DB7A9CBF729DE2B655D94F86A89E95C9 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		DE5E9D9140F3898C90C4C39A46679112 /* UIImage-Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage-Extensions.swift"; sourceTree = "<group>"; };
 		DF9215EAFBB6E65C955E550507B4402C /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
-		E2B7718E5257D918B292FCB2DBD7B3E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E2B7718E5257D918B292FCB2DBD7B3E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		E4B436730B19BCBDA198B64FAE04466B /* YHRefreshAutoNormalFooter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YHRefreshAutoNormalFooter.swift; sourceTree = "<group>"; };
 		E5CCE7ADBB19B79172539867B63779A5 /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
-		E5D09565D9C3F4DCF818EAA4BA6A632C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E5D09565D9C3F4DCF818EAA4BA6A632C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E61989A711231585FBBC50E38298ED24 /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
 		E6B597B5ED0994555CD66CC3A42FE651 /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
 		EA4E83996E9011EF718881B249C8B2F8 /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
@@ -484,7 +488,6 @@
 				88ECE4125D582F13F0F9E8D6A9E71253 /* UILayoutSupport+Extensions.swift */,
 				4C7D6F619274006D9CB046E276A99451 /* Support Files */,
 			);
-			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -576,7 +579,6 @@
 				88F0CA1DD9C675A8EA6370198BA3BF28 /* Resources */,
 				0C16F4BD73A49D278079CF02C7E9E655 /* Support Files */,
 			);
-			name = MJRefresh;
 			path = MJRefresh;
 			sourceTree = "<group>";
 		};
@@ -635,7 +637,9 @@
 		AB6554B58C731BBF3D3230553E609A23 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				22570DDC22A40EED006A5CC1 /* Dictionary-Extension.swift */,
 				B6413AFC6B6C57A8BD8F82FB804C925B /* Array-Extension.swift */,
+				22570DDA22A40E61006A5CC1 /* CGRect-Extension.swift */,
 				9272FD822262222A5B6E610BD88288B6 /* Bundle-Extension.swift */,
 				ECCE7F0B8FCD320970F1EE6EC81CC63F /* Date-Extension.swift */,
 				45338CF7E0F219335DDC6000C836EA2D /* Dictionary-Extension.swift */,
@@ -1023,6 +1027,7 @@
 			files = (
 				BD904917E006EA0697DD6CBF0482B65A /* Array-Extension.swift in Sources */,
 				998BB5550DE6F1C164D21E8EBE0D473E /* Bundle-Extension.swift in Sources */,
+				22570DDD22A40EED006A5CC1 /* Dictionary-Extension.swift in Sources */,
 				94D69C8A7C33882B5758E65B3F92FA07 /* Date-Extension.swift in Sources */,
 				C6D4385C7324593F53BFA201006D36C2 /* Dictionary-Extension.swift in Sources */,
 				574B20DC4087EAAF9F7B8C375CA1CE46 /* Font-Extension.swift in Sources */,
@@ -1060,6 +1065,7 @@
 				2ECA8E0F66790D6488181EFE90D457B8 /* YHStaticTableViewController.swift in Sources */,
 				FD7D88FF3133298399C3ABAF762929B0 /* YHTableViewController.swift in Sources */,
 				99DF725D4F40C53726C112176D3E9A36 /* YHTitlesListsController.swift in Sources */,
+				22570DDB22A40E61006A5CC1 /* CGRect-Extension.swift in Sources */,
 				BC04EC5EFB71DF53C45A9FDDBCF8095B /* YHViewController.swift in Sources */,
 				7DD994DC221D022944F957BB0DA2F474 /* YHWebViewController.swift in Sources */,
 			);
@@ -1334,8 +1340,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
