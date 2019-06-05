@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIViewController {
     
-    var tabbarHeight : CGFloat {
+    public var tabbarHeight : CGFloat {
         return self.tabBarController?.tabBar.frame.height ?? 0
     }
 }

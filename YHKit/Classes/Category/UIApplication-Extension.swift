@@ -9,7 +9,7 @@ import UIKit
 
 public extension UIApplication {
     
-    var yh_interfaceOrientation_isPortrait: Bool {
+    public var yh_interfaceOrientation_isPortrait: Bool {
         return UIApplication.shared.statusBarOrientation == UIInterfaceOrientation.portrait
     }
 }

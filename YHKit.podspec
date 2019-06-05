@@ -42,6 +42,7 @@ TODO: Add long description of the pod here.
   #s.frameworks = 'UIKit'
   s.dependency 'MJRefresh'
   s.dependency 'SnapKit'
+  s.dependency 'Kingfisher'
   
 
 

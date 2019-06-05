@@ -1,7 +1,9 @@
 PODS:
+  - Kingfisher (4.10.1)
   - MJRefresh (3.1.15.3)
   - SnapKit (4.0.0)
-  - YHKit (1.0.0):
+  - YHKit (1.0.1):
+    - Kingfisher
     - MJRefresh
     - SnapKit
 
@@ -10,6 +12,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Kingfisher
     - MJRefresh
     - SnapKit
 
@@ -18,9 +21,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  YHKit: d9412eb8634ff5305534b3fabec18f6867148391
+  YHKit: 4a915aaed0052ac2d301885ef6ded6bfefcbb714
 
 PODFILE CHECKSUM: cf29aa42bd64c96cdb12c34d4ad67d1dc8d1d6a0
 

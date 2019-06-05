@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension CGRect {
+public extension CGRect {
 
     /// Easier initialization of CGRect
     public init(x: CGFloat, y: CGFloat, w: CGFloat, h: CGFloat) {

@@ -8,9 +8,9 @@
 
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     
-    class func HexColor(_ hexColor: Int32 ) -> UIColor {
+    public class func HexColor(_ hexColor: Int32 ) -> UIColor {
         
         let r = CGFloat(((hexColor & 0x00FF0000) >> 16)) / 255.0
         let g = CGFloat(((hexColor & 0x0000FF00) >> 8)) / 255.0
@@ -20,7 +20,7 @@ extension UIColor {
     }
 }
 
-extension UIColor {
+public extension UIColor {
     
     public static func random(randomAlpha: Bool = false) -> UIColor {
         let randomRed = CGFloat.random()

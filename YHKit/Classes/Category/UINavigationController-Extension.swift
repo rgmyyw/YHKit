@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UINavigationController {
+public extension UINavigationController {
     
     /// 导航,返回N层
     ///

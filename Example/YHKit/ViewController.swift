@@ -15,6 +15,7 @@ class ViewController: YHViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
         yh_navigationBar.titleLabel.text = "YHKit"
         view.enableDebug = true
         
