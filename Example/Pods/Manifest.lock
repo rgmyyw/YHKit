@@ -2,7 +2,7 @@ PODS:
   - Kingfisher (4.10.1)
   - MJRefresh (3.1.15.3)
   - SnapKit (4.0.0)
-  - YHKit (1.0.1):
+  - YHKit (1.0.2):
     - Kingfisher
     - MJRefresh
     - SnapKit
@@ -24,8 +24,8 @@ SPEC CHECKSUMS:
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  YHKit: 4a915aaed0052ac2d301885ef6ded6bfefcbb714
+  YHKit: 6d70b30eae880a0b4107fb3d2ef4931e6526b7ee
 
-PODFILE CHECKSUM: cf29aa42bd64c96cdb12c34d4ad67d1dc8d1d6a0
+PODFILE CHECKSUM: 0f4a7cfe0cee14494799b944fba8826ebc2874a1
 
 COCOAPODS: 1.6.1
