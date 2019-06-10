@@ -7,30 +7,31 @@
 
 import Foundation
 
+private enum UIButtonPrivateKey {
+    static var fontSizeKey = "fontSizeKey"
+    static var hitTestEdgeInsetsKey = "hitTestEdgeInsetsKey"
+}
 
-extension UIButton {
+public extension UIButton {
     
-    ///提供多个运行时的key
-    private struct RuntimeKey {
-        static let btnKey = UnsafeRawPointer.init(bitPattern: "BTNKey".hashValue)
-    }
     ///提供属性供外部设置
     public var hitTestEdgeInsets: UIEdgeInsets? {
         set {
-            objc_setAssociatedObject(self, RuntimeKey.btnKey!, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY)
+            objc_setAssociatedObject(self, &UIButtonPrivateKey.hitTestEdgeInsetsKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY)
         }
         get {
-            return (objc_getAssociatedObject(self, RuntimeKey.btnKey!) as? UIEdgeInsets) ?? UIEdgeInsets.zero
+            return (objc_getAssociatedObject(self, &UIButtonPrivateKey.hitTestEdgeInsetsKey) as? UIEdgeInsets) ?? UIEdgeInsets.zero
         }
     }
+    
     ///重写点是否包含在view的区域内
     override open func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        
         if UIEdgeInsetsEqualToEdgeInsets(hitTestEdgeInsets!, UIEdgeInsets.zero) || !isEnabled || isHidden {
             return super.point(inside: point, with: event)
         }
         let relativeFrame = bounds
         let hitFrame = UIEdgeInsetsInsetRect(relativeFrame, hitTestEdgeInsets!)
-        
         return hitFrame.contains(point)
     }
 }
@@ -54,4 +55,38 @@ public extension UIButton {
         self.setImage(UIImage(named: selectedImageName ?? ""), for: .selected)
     }
 }
+
+
+//public extension UIButton {
+//
+//    @IBInspectable var fontName : String? {
+//        get {
+//            return self.titleLabel?.fontName
+//        }
+//        set {
+//
+//            guard let fontName = newValue else {
+//                return
+//            }
+//            if let fontSize = objc_getAssociatedObject(self, &UIButtonPrivateKey.fontSizeKey) as? CGFloat {
+//                self.titleLabel?.font = UIFont(name: fontName, size: fontSize)
+//            } else {
+//                self.titleLabel?.font = UIFont(name: fontName, size: 15)
+//            }
+//        }
+//    }
+//
+//    @IBInspectable var fontSize : CGFloat {
+//
+//        get {
+//            return self.titleLabel?.font.pointSize ?? 0
+//        }
+//        set {
+//            guard newValue < 0 else {
+//                return
+//            }
+//            objc_setAssociatedObject(self, &UIButtonPrivateKey.fontSizeKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
+//        }
+//    }
+//}
 

@@ -8,6 +8,10 @@
 
 import UIKit
 
+private enum UILabelPrivateKey {
+    
+    static var fontSizeKey = "fontSizeKey"
+}
 
 public extension UILabel {
     
@@ -20,5 +24,39 @@ public extension UILabel {
         self.attributedText = attr
         self.sizeToFit()
     }
-    
 }
+
+public extension UILabel {
+    
+    @IBInspectable var fontName : String?  {
+        get {
+            return self.font.fontName
+        }
+        set {
+            
+            guard let fontName = newValue else {
+                return
+            }
+            if let fontSize = objc_getAssociatedObject(self, &UILabelPrivateKey.fontSizeKey) as? CGFloat {
+                self.font = UIFont(name: fontName, size: fontSize)
+            } else {
+                self.font = UIFont(name: fontName, size: 14)
+            }
+        }
+    }
+    
+    @IBInspectable var fontSize : CGFloat {
+        
+        get {
+            return self.font.pointSize
+        }
+        set {
+            guard newValue < 0 else {
+                return
+            }
+            objc_setAssociatedObject(self, &UILabelPrivateKey.fontSizeKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
+        }
+    }
+}
+
+
