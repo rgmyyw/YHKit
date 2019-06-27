@@ -20,8 +20,9 @@ open class YHNavigationBar: UIView {
     public var yh_leftBarButtonItems : [UIView] = []
     /// 设置右边导航条barbuttonItem
     public var yh_rightBarButtonItems : [UIView] = []
-
-
+    /// 设置导航条yh_navigationBarLeftView 和 yh_navigationBarRightView 的间距,默认15
+    public var yh_navigationBarLeftRightEdgeMargin : CGFloat = 15
+    
     private lazy var yh_navigationBarLeftView : UIView = UIView()
     private lazy var yh_navigationBarRightView : UIView = UIView()
     
@@ -85,36 +86,12 @@ open class YHNavigationBar: UIView {
         }
         
         
-//        //titleLabel.backgroundColor = UIColor.yellow
-//        addConstraint(NSLayoutConstraint(item: titleLabel, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0));
-//        titleLabel.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.width, multiplier: 0, constant: 44))
-//        //addConstraint(NSLayoutConstraint(item: titleLabel, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.width, multiplier: 0.5, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: titleLabel, attribute: NSLayoutAttribute.bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: bottomSepLineView, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: bottomSepLineView, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 0))
-//        addConstraint(NSLayoutConstraint(item: bottomSepLineView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.right, multiplier: 1, constant: 0))
-//        bottomSepLineView.addConstraint(NSLayoutConstraint(item: bottomSepLineView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 0, constant: 1.0 / UIScreen.main.scale))
-//
-//
-//
-//
-//
-//        addConstraint(NSLayoutConstraint(item: yh_navigationBarLeftView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: titleLabel, attribute: NSLayoutAttribute.left, multiplier: 1, constant: -10));
-//        addConstraint(NSLayoutConstraint(item: yh_navigationBarLeftView, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 16))
-//        addConstraint(NSLayoutConstraint(item: yh_navigationBarLeftView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: titleLabel, attribute: NSLayoutAttribute.height, multiplier: 1, constant: 0));
-//        addConstraint(NSLayoutConstraint(item: yh_navigationBarLeftView, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: titleLabel, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0));
-//
-//
-//        addConstraint(NSLayoutConstraint(item: yh_navigationBarRightView, attribute: NSLayoutAttribute.right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: NSLayoutAttribute.right, multiplier: 1, constant: -16));
-//        addConstraint(NSLayoutConstraint(item: yh_navigationBarRightView, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: titleLabel, attribute: NSLayoutAttribute.right, multiplier: 1, constant: 10));
-//        addConstraint(NSLayoutConstraint(item: yh_navigationBarRightView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: yh_navigationBarLeftView, attribute: NSLayoutAttribute.height, multiplier: 1, constant: 0));
-//        addConstraint(NSLayoutConstraint(item: yh_navigationBarRightView, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: yh_navigationBarLeftView, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0));
     }
     
     override open func layoutSubviews() {
         super.layoutSubviews()
         
-        var leftLastOffsetX : CGFloat  = 15
+        var leftLastOffsetX : CGFloat  = yh_navigationBarLeftRightEdgeMargin
         for view in yh_leftBarButtonItems {
             view.frame = CGRect(x: leftLastOffsetX, y: 0, width: view.frame.width, height: yh_navigationBarLeftView.frame.height)
             leftLastOffsetX = view.frame.maxX
@@ -123,7 +100,7 @@ open class YHNavigationBar: UIView {
         
         if !yh_rightBarButtonItems.isEmpty {
             
-            var rightLastOffsetX : CGFloat  = yh_navigationBarRightView.bounds.width
+            var rightLastOffsetX : CGFloat  = yh_navigationBarRightView.bounds.width - yh_navigationBarLeftRightEdgeMargin
             for view in yh_rightBarButtonItems {
                 rightLastOffsetX = (rightLastOffsetX - view.frame.width)
                 view.frame = CGRect(x: rightLastOffsetX, y: 0, width: view.frame.width, height: yh_navigationBarRightView.frame.height)

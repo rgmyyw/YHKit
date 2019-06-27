@@ -23,8 +23,8 @@ open class YHWebViewController: YHViewController {
     public var isAutoChangeTitle: Bool = true
     public var webView: WKWebView!
     public var html: String? = nil
+    public lazy var backBtn: UIButton = UIButton(type: UIButtonType.custom)
     private lazy var closeBtn: UIButton = UIButton(type: UIButtonType.custom)
-    private lazy var backBtn: UIButton = UIButton(type: UIButtonType.custom)
     private lazy var progressView: UIProgressView = UIProgressView()
     public var gotoUrl: String? {
         didSet {
@@ -226,19 +226,18 @@ extension YHWebViewController: WKUIDelegate {
 // MARK:- btns
 extension YHWebViewController {
     private func addActions() {
-        backBtn.setImage(UIImage.yh_image(name: "YHKit_navigation_Button_Return_normal", bundleClass: YHWebViewController.self), for: UIControlState.normal)
-        backBtn.setImage(UIImage.yh_image(name: "YHKit_navigation_Button_Return_Click", bundleClass: YHWebViewController.self), for: UIControlState.highlighted)
+        
+        backBtn.setTitle("返回", for: .normal)
+        backBtn.setTitleColor(UIColor.black, for: .normal)
         closeBtn.setTitle("关闭", for: UIControlState.normal)
         closeBtn.setTitleColor(UIColor.black, for: UIControlState.normal)
         closeBtn.setTitleColor(UIColor.red, for: UIControlState.highlighted)
         closeBtn.isHidden = true
+        backBtn.sizeToFit()
+        closeBtn.sizeToFit()
         
-        let leftView = UIView(frame: CGRect(x: 0, y: yh_navigationBar.frame.size.height - 44.0, width: 90, height: 44))
-        leftView.addSubview(backBtn)
-        leftView.addSubview(closeBtn)
-        backBtn.frame = CGRect(x: 0, y: 0, width: 34.0, height: 44.0)
-        closeBtn.frame = CGRect(x: leftView.frame.size.width - 44.0, y: 0, width: 44, height: 44.0)
-        yh_navigationBar.addSubview(leftView)
+        yh_navigationBar.yh_leftBarButtonItems = [backBtn,closeBtn]
+        
         backBtn.addTarget(self, action: #selector(btn_back(_:)), for: UIControlEvents.touchUpInside)
         closeBtn.addTarget(self, action: #selector(btn_close(_:)), for: UIControlEvents.touchUpInside)
     }

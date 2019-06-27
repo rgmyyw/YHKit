@@ -14,6 +14,10 @@ import UIKit
     @objc optional func navigationBackButtonClick ()
 }
 
+public enum YHNavBarViewControllerStyle {
+    public static var preferredStatusBarStyle : UIStatusBarStyle = .default
+}
+
 open class YHNavBarViewController: UIViewController {
     
     public weak var delegate : YHNavBarViewControllerDelegate?
@@ -21,30 +25,32 @@ open class YHNavBarViewController: UIViewController {
     /// 是否禁止全局滑动返回, 默认false
     public var yh_interactivePopDisabled = false
     
-    /// 是否需要隐藏返回按钮
+    /// YHKit: 是否需要隐藏返回按钮
     public var yh_isBackActionBtnHidden = false {
         willSet {
             yh_backBtn.isHidden = newValue
         }
     }
-    
+
+    /// YHKit: 导航返回按钮箭头图片
     public var yh_navigationBackButtonImage : UIImage? = nil {
         willSet{
             yh_backBtn.setImage(newValue, for: UIControlState.normal)
             yh_backBtn.setImage(newValue, for: UIControlState.highlighted)
         }
     }
-    
+    /// YHKit: 导航条高度
     public var yh_navigationBarHeight : CGFloat = UIApplication.shared.statusBarFrame.height + 44.0 {
         willSet{
             heightConstraint?.constant = newValue
             updateViewConstraints()
         }
     }
-
+    /// YHKit: 导航条
     public let yh_navigationBar: YHNavigationBar = YHNavigationBar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: UIScreen.main.bounds.width, height: UIApplication.shared.statusBarFrame.size.height + 44)))
-    public let yh_backBtn: UIButton = UIButton(type: UIButtonType.custom)
     
+    /// YHKit: 默认返回箭头
+    public let yh_backBtn: UIButton = UIButton(type: UIButtonType.custom)
     
     private var heightConstraint: NSLayoutConstraint?
     
@@ -56,7 +62,6 @@ open class YHNavBarViewController: UIViewController {
         yh_addBackBtn()
         navigationItem.addObserver(self, forKeyPath: "title", options: NSKeyValueObservingOptions.new, context: nil)
     }
-    
  
     open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -82,13 +87,15 @@ open class YHNavBarViewController: UIViewController {
 // MARK:- StatusBar
 //        setNeedsStatusBarAppearanceUpdate()
 extension YHNavBarViewController {
-   open override var prefersStatusBarHidden: Bool {
+    
+    open override var prefersStatusBarHidden: Bool {
         return false
     }
-   open  override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.default
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return  YHNavBarViewControllerStyle.preferredStatusBarStyle
     }
-   open  override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+    open override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return UIStatusBarAnimation.slide
     }
     open override var shouldAutorotate: Bool {
@@ -96,7 +103,7 @@ extension YHNavBarViewController {
     }
     // MARK: - about keyboard orientation
     open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-//      return UIInterfaceOrientationMask.allButUpsideDown
+        //return UIInterfaceOrientationMask.allButUpsideDown
         return UIInterfaceOrientationMask.portrait
     }
     //返回最优先显示的屏幕方向
