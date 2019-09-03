@@ -48,6 +48,7 @@ extension YHNavigationController: UIGestureRecognizerDelegate {
 #### YHNavigationBar 
 
 ```swift
+
 public let bottomSepLineView = UIView()
 public let titleLabel = UILabel()
     
@@ -57,7 +58,8 @@ public let titleLabel = UILabel()
 
 * 继承自 UIViewController, 添加了一个自定义的导航条 View (YHNavigationBar)
 
-```
+```swift
+
 yh_navigationBar.isHidden = !(parent != nil && parent!.isKind(of: NJNavigationController.classForCoder()))
 
 ```
@@ -101,10 +103,11 @@ override func observeValue(forKeyPath keyPath: String?, of object: Any?, change:
 #### YHViewController
 
 * 基本设置
-    ```swift
-    view.backgroundColor = UIColor.groupTableViewBackground
-    automaticallyAdjustsScrollViewInsets = false
-    ```
+```swift
+
+view.backgroundColor = UIColor.groupTableViewBackground
+automaticallyAdjustsScrollViewInsets = false
+```
 * 控制器释放的打印
 
 #### YHTableViewController
