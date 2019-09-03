@@ -82,7 +82,8 @@ extension YHNavBarViewController {
 ```
 
 * 控制标题
-```
+```swift
+
 yh_navigationBar.titleLabel.text = navigationItem.title != nil ? navigationItem.title : title
 navigationItem.addObserver(self, forKeyPath: "title", options: NSKeyValueObservingOptions.new, context: nil)
 
