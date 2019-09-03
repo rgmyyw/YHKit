@@ -36,7 +36,7 @@ extension YHNavigationController: UIGestureRecognizerDelegate {
         self.interactivePopGestureRecognizer?.isEnabled = false
     }
     func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        if let vc = self.childViewControllers.last as? NJNavBarViewController {
+        if let vc = self.childViewControllers.last as? YHNavBarViewController {
             return (self.childViewControllers.count > 1 && !vc.nj_interactivePopDisabled)
         }else {
             return false
@@ -60,7 +60,7 @@ public let titleLabel = UILabel()
 
 ```swift
 
-yh_navigationBar.isHidden = !(parent != nil && parent!.isKind(of: NJNavigationController.classForCoder()))
+yh_navigationBar.isHidden = !(parent != nil && parent!.isKind(of: NavigationController.classForCoder()))
 
 ```
 
